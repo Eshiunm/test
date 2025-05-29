@@ -1,4 +1,4 @@
-import { Layout } from "antd";
+import { Button, Layout, Space } from "antd";
 
 const { Header, Footer, Content } = Layout;
 
@@ -33,7 +33,13 @@ const layoutStyle = {
 function App() {
   return (
     <Layout style={layoutStyle}>
-      <Header style={headerStyle}>Header</Header>
+      <Header style={headerStyle}>
+        <Space align="center">
+          center
+          <Button type="primary">Primary</Button>
+          <span className="mock-block">Block</span>
+        </Space>
+      </Header>
       <Content style={contentStyle}>Content</Content>
       <Footer style={footerStyle}>Footer</Footer>
     </Layout>
